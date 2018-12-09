@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inner_nav_graph"
+    app:startDestination="@id/innerFragmentB1">
+
+    <fragment
+        android:id="@+id/innerFragmentB1"
+        android:name="com.example.jeffreyfhow.nestednavfragmentstest.InnerFragmentB1"
+        android:label="InnerFragmentB1"
+        tools:layout="@layout/inner_fragment_b1">
+        <action android:id="@+id/action_innerFragmentB1_to_innerFragmentB2" app:destination="@id/innerFragmentB2"/>
+    </fragment>
+    <fragment
+        android:id="@+id/innerFragmentB2"
+        android:name="com.example.jeffreyfhow.nestednavfragmentstest.InnerFragmentB2"
+        android:label="InnerFragmentB2"
+        tools:layout="@layout/inner_fragment_b2"/>
+</navigation>
