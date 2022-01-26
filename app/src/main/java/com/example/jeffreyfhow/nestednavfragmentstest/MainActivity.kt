@@ -1,7 +1,7 @@
 package com.example.jeffreyfhow.nestednavfragmentstest
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
      */
     private fun navigateUpV2(): Boolean {
         val hostedFragment = navHost?.childFragmentManager?.primaryNavigationFragment
-        return when(hostedFragment){
+        return when (hostedFragment) {
             is FragmentB -> {
-                if(hostedFragment.isInnerFragmentB2Showing()){
+                if (hostedFragment.isInnerFragmentB2Showing()) {
                     findNavController(R.id.embeddedNavHostFragment).navigateUp()
                 } else {
                     findNavController(R.id.navHost).navigateUp()
